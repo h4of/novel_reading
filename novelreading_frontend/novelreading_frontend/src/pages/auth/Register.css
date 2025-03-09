@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  background: #a5e8f9;
+  min-height: 80vh;
+}
+.register-container {
+  background: #a4c0ed;
+  padding: 20px 140px;
+  margin-top: 60px;
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0.1);
+}
+.register-form .register-title {
+  font-family: "Sigmar", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3rem;
+  margin-bottom: 2.5rem;
+}
+.register-form .input-wrapper {
+  width: 512px;
+  height: 45px;
+  position: relative;
+  margin-bottom: 0.8rem;
+}
+.register-form .input-wrapper .input-field {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  padding: 0 1.25rem 0 3.12rem;
+  border-radius: 0.3rem;
+  font-size: 0.95rem;
+  border: 0.5px solid #bfb3f2;
+}
+.register-form .input-wrapper i {
+  color: #a395e0;
+  position: absolute;
+  top: 50%;
+  left: 0.9rem;
+  transform: translateY(-50%);
+}
+.register-form .register-button {
+  width: 100px;
+  height: 25px;
+  border-radius: 1rem;
+  background: #f6ffde;
+  border: 0 solid #f6ffde;
+  margin: 15px 0 20px 0;
+}
+.logo {
+  position: absolute;
+  left: -10px;
+  top: 5px;
+}
+.image-register {
+  display: inline;
+}
+.image-register .image-register-book {
+  position: absolute;
+  left: 0%;
+}
+.image-register .image-register-boy {
+  position: absolute;
+  left: 80%;
+  mix-blend-mode: multiply;
+  filter: brightness(1.2) saturate(1.6);
+}

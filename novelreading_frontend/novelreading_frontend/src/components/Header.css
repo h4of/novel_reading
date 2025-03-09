@@ -1,0 +1,63 @@
+.header-container {
+  background: #a5e8f9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-list {
+  align-items: center;
+  display: flex;
+}
+.nav-list .nav-item {
+  margin: 10px 10px;
+  cursor: pointer;
+  font-weight: bold;
+  display: inline-block;
+  position: relative;
+}
+.nav-list .nav-item::after,
+.nav-icon .material-symbols-rounded::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  transform: scaleX(0);
+  background: #000;
+  transition: transform 0.3s;
+}
+.nav-list .nav-item:hover::after,
+.nav-item:visited::after,
+.nav-icon .material-symbols-rounded:hover::after,
+.nav-icon .material-symbols-rounded:visited::after {
+  transform: scaleX(1);
+}
+.header-container .navbar-brand {
+  cursor: pointer;
+  margin: 10px 10px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 10px;
+  color: inherit;
+}
+.header-container .navbar-brand:active,
+.nav-item:active {
+  color: #fff;
+}
+.header-container .nav-icon {
+  margin: 10px 10px;
+  cursor: pointer;
+}
+.header-container .nav-icon .material-symbols-rounded {
+  color: #000;
+  text-decoration: none;
+  position: relative;
+}
+.header-container .nav-icon .material-symbols-rounded:active {
+  color: #fff;
+}
+.material-symbols-rounded {
+  margin: 0 5px;
+}

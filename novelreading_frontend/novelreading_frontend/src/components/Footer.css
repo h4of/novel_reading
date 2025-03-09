@@ -1,0 +1,32 @@
+.footer-container {
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  bottom: 0;
+  background: #a5e8f9;
+}
+.footer-container .infomation {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+  list-style: none;
+}
+.header-choose {
+  color: #265073;
+  font-weight: 900;
+  font-family: "Arial Narrow Bold", sans-serif;
+  text-transform: uppercase;
+  padding: 10px 20px;
+}
+.choose {
+  font-weight: 450;
+  font-size: 10px;
+  line-height: 0;
+  list-style: none;
+  padding: 10px 25px;
+}
