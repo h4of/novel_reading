@@ -1,19 +1,18 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
+.login-container {
+  width: 100%;
   display: flex;
   background: #a5e8f9;
-  min-height: 80vh;
+  min-height: 100vh;
+  justify-content: center;
 }
-.container .login-container {
+.login-container .login-box {
+  height: 80%;
   background: #a4c0ed;
   padding: 20px 140px;
-  margin-top: 60px;
+  margin-top: 100px;
   border-radius: 0.5rem;
   box-shadow: 0 5px 10px rgba(0, 0, 0.1);
+  text-align: center;
 }
 .login-form .login-title {
   font-family: "Sigmar", serif;
@@ -50,7 +49,15 @@ body {
   border-radius: 1rem;
   background: #f6ffde;
   border: 0 solid #f6ffde;
-  margin: 5px 0 30px 0;
+  margin: 5px 0px 30px 0;
+  cursor: pointer;
+}
+.register-button {
+  text-decoration: none;
+  color: #000;
+}
+.forgot-password-txt {
+  font-size: 10px;
 }
 .logo {
   position: absolute;
@@ -63,10 +70,12 @@ body {
 .image-login .image-login-book {
   position: absolute;
   left: 0%;
+  bottom: 0%;
 }
 .image-login .image-login-boy {
   position: absolute;
   left: 80%;
+  bottom: 0;
   mix-blend-mode: multiply;
   filter: brightness(1.2) saturate(1.6);
 }

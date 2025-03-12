@@ -79,3 +79,22 @@
   justify-content: center;
   gap: 10px;
 }
+.box {
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+}
+.box .input-wrapper {
+  width: 100%;
+  left: 35%;
+}
+.box .input-wrapper .input-field {
+  width: 50%;
+  padding: 10px 0;
+  margin: 10px 0;
+  font-size: 100%;
+  border-radius: 0.3rem;
+}
+.box .input-wrapper .input-field::placeholder {
+  size: 100%;
+}

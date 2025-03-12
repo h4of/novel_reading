@@ -8,30 +8,43 @@
   align-items: center;
   display: flex;
 }
-.nav-list .nav-item {
+.nav-list li {
   margin: 10px 10px;
   cursor: pointer;
   font-weight: bold;
   display: inline-block;
   position: relative;
 }
-.nav-list .nav-item::after,
+.nav-list li .nav-item-text {
+  text-decoration: none;
+  color: #000;
+}
+.nav-list li::after,
 .nav-icon .material-symbols-rounded::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: 1px;
   height: 2px;
   width: 100%;
   transform: scaleX(0);
   background: #000;
   transition: transform 0.3s;
 }
-.nav-list .nav-item:hover::after,
-.nav-item:visited::after,
+.nav-list li:hover::after,
 .nav-icon .material-symbols-rounded:hover::after,
 .nav-icon .material-symbols-rounded:visited::after {
   transform: scaleX(1);
+}
+.active ::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  transform: scaleX(1);
+  background: #000;
 }
 .header-container .navbar-brand {
   cursor: pointer;
@@ -43,7 +56,7 @@
   color: inherit;
 }
 .header-container .navbar-brand:active,
-.nav-item:active {
+.nav-item .nav-item-text:active {
   color: #fff;
 }
 .header-container .nav-icon {

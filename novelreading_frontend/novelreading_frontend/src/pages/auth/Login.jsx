@@ -1,14 +1,17 @@
 import "./Login.css";
+import { Link } from "react-router-dom";
 
 function Login() {
   return (
-    <div className="container">
+    <div className="login-container">
       <div className="logo">
-        <img src="logo.svg" alt="this is logo" width="100" height="50" />
+        <a href="/home">
+          <img src="logo.svg" alt="this is logo" width="100" height="50" />
+        </a>
       </div>
-      <div className="login-container">
+      <div className="login-box">
         <form action="#" className="login-form">
-          <h2 className="login-title">Đăng Nhập</h2>
+          <h1 className="login-title">Đăng Nhập</h1>
           <div className="input-wrapper">
             <i className="material-symbols-rounded">person</i>
             <input
@@ -18,7 +21,6 @@ function Login() {
               required
             />
           </div>
-
           <div className="input-wrapper">
             <i className="material-symbols-rounded">lock</i>
             <input
@@ -29,15 +31,15 @@ function Login() {
             />
           </div>
           <button className="login-button">Đăng nhập</button>
-          <a className="forgot-password" href="#">
+          <Link className="register-button" to="/register" reloadDocument>
+            Đăng ký
+          </Link>
+          <a className="forgot-password-txt" href="#">
             <br></br>
             <u>
               <b>Bạn quên mật khẩu?</b>
             </u>
             <br></br>
-          </a>
-          <a className="register" href="#">
-            Đăng ký
           </a>
         </form>
       </div>

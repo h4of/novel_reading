@@ -1,7 +1,7 @@
-import Header from "../components/Header";
-import user from "../assets/images/user.png";
 import "./Profile.css";
+import user from "../assets/images/user.png";
 import { useState } from "react";
+import Header from "../components/Header";
 
 const Admin = () => {
   const [activeTab, setActiveTab] = useState("");
@@ -37,9 +37,27 @@ const Admin = () => {
       </div>
       <div className="profile-container">
         {activeTab === "edit" && (
-          <div className="box">Chỉnh sửa thông tin truyện</div>
+          <div className="box">
+            Chỉnh sửa thông tin truyện
+            <select value={selectValue} onChange={handleChange}>
+              <option value=""></option>
+            </select>
+          </div>
         )}
-        {activeTab === "add" && <div className="box"></div>}
+        {activeTab === "add" && (
+          <div className="box">
+            Thêm truyện mới
+            <div className="input-wrapper">
+              <input
+                type="text"
+                className="input-field"
+                placeholder="Nhập tên truyện"
+                required
+              />
+            </div>
+            <button className="form-button">Thêm truyện</button>
+          </div>
+        )}
         {activeTab === "delete" && <div className="box">Xóa truyện</div>}
         {activeTab === "hide" && <div className="box">Ẩn truyện</div>}
       </div>

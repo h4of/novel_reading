@@ -1,33 +1,41 @@
+import { Link } from "react-router-dom";
 import "./Header.css";
+import NavbarLink from "./NavbarLink.jsx";
 
 const Header = () => {
+  const role = true;
   return (
     <>
       <div className="header-container">
-        <a className="navbar-brand" href="#">
+        <Link className="navbar-brand" to="/home" reloadDocument>
           <img
-            src="logo.svg"
+            src="/logo.svg"
             alt=""
             width="50"
             height="50"
             className="form-icon"
           />
           <p>Đọc truyện online</p>
-        </a>
+        </Link>
         <div className="navbar-content">
           <ul className="nav-list">
-            <li className="nav-item">Trang chủ</li>
-            <li className="nav-item">Danh sách</li>
-            <li className="nav-item">Tác giả</li>
+            <NavbarLink to="/home">Trang chủ</NavbarLink>
+            <NavbarLink to="/list">Danh sách</NavbarLink>
+            <NavbarLink to="/author">Tác giả</NavbarLink>
           </ul>
         </div>
         <div className="nav-icon">
-          <a href="#" className="material-symbols-rounded">
+          <Link to="#" className="material-symbols-rounded">
             search
-          </a>
-          <a href="#" className="material-symbols-rounded">
+          </Link>
+          <Link
+            // to="/login"
+            reloadDocument
+            to={role ? "/profile/admin" : "/profile/user"}
+            className="material-symbols-rounded"
+          >
             person
-          </a>
+          </Link>
         </div>
       </div>
     </>

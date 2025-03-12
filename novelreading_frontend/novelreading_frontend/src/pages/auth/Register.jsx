@@ -2,11 +2,13 @@ import "./Register.css";
 
 function Register() {
   return (
-    <>
+    <div className="register-container">
       <div className="logo">
-        <img src="logo.svg" alt="this is logo" width="100" height="50" />
+        <a href="/home">
+          <img src="logo.svg" alt="this is logo" width="100" height="50" />
+        </a>
       </div>
-      <div className="register-container">
+      <div className="register-box">
         <form action="#" className="register-form">
           <h2 className="register-title">Đăng Ký</h2>
           <div className="input-wrapper">
@@ -55,7 +57,7 @@ function Register() {
           height="300"
         />
       </div>
-    </>
+    </div>
   );
 }
 

@@ -1,7 +1,7 @@
 import "./List.css";
-import Header from "../components/Header";
 import Story from "../components/Novel";
 import user from "../assets/images/user.png";
+import Header from "../components/Header";
 
 const List = () => {
   const arr = {

@@ -9,5 +9,6 @@ public interface NovelService {
 
     public Novel deleteNovel(Novel novel);
 
-    public List<Novel> getAllNameNovel();
+    public List<Novel> getAllNovel();
+
 }

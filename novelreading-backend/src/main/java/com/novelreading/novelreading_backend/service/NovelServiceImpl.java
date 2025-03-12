@@ -26,7 +26,7 @@ public class NovelServiceImpl implements NovelService{
     }
 
     @Override
-    public List<Novel> getAllNameNovel() {
+    public List<Novel> getAllNovel() {
         return novelRepository.findAll();
     }
 }
