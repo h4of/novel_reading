@@ -1,7 +1,13 @@
+import { useState } from "react";
 import "./Login.css";
 import { Link } from "react-router-dom";
 
 function Login() {
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
+  function handleClick(e) {
+    e.preventDefault();
+  }
   return (
     <div className="login-container">
       <div className="logo">
@@ -19,6 +25,8 @@ function Login() {
               placeholder="Email address"
               className="input-field"
               required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
           </div>
           <div className="input-wrapper">
@@ -28,9 +36,13 @@ function Login() {
               placeholder="password"
               className="input-field"
               required
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <button className="login-button">Đăng nhập</button>
+          <button className="login-button" onClick={handleClick}>
+            Đăng nhập
+          </button>
           <Link className="register-button" to="/register" reloadDocument>
             Đăng ký
           </Link>

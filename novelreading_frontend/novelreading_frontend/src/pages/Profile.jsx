@@ -3,6 +3,7 @@ import user from "../assets/images/user.png";
 import "./Profile.css";
 
 const Profile = () => {
+  const userName = "";
   return (
     <div className="container">
       <Header />
@@ -17,7 +18,7 @@ const Profile = () => {
       <div className="profile-user">
         <img src={user} className="user-image"></img>
         <div className="user-information">
-          <p className="user-name">User Name</p>
+          <p className="user-name">{userName}</p>
         </div>
       </div>
       <div className="novel-recently">

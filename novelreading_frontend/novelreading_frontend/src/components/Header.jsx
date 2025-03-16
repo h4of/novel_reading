@@ -29,9 +29,9 @@ const Header = () => {
             search
           </Link>
           <Link
-            // to="/login"
+            to="/login"
             reloadDocument
-            to={role ? "/profile/admin" : "/profile/user"}
+            // to={role ? "/profile/admin" : "/profile/user"}
             className="material-symbols-rounded"
           >
             person

@@ -1,0 +1,28 @@
+.text-rating {
+  position: relative;
+  text-align: center;
+  padding: 10px;
+}
+.text-rating::after {
+  position: absolute;
+  content: "";
+  margin: 0 10%;
+  width: 80%;
+  height: 1px;
+  left: 0;
+  top: 50%;
+}
+.text-rating h2 {
+  position: relative;
+  background: #fff;
+  padding: 0 15px;
+  display: inline;
+  z-index: 1;
+}
+.novel-high-rating {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px 15%;
+}

@@ -14,11 +14,22 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public User saveUser(User user) {
+        Optional<User> existingEmail = userRepository.findByEmail(user.getEmail());
+        try{
+            existingEmail.isPresent();
+        }catch (Exception e){
+
+        }
         return userRepository.save(user);
     }
 
     @Override
-    public Optional<User> findByEmailAndPassword(String email,String password) {
-        return userRepository.findByEmailAndPassword(email,password);
+    public String getUserName(User user) {
+        return user.getUser_name();
+    }
+
+    @Override
+    public String userLogin(User user) {
+        Optional<User>
     }
 }

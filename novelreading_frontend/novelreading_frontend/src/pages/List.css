@@ -2,6 +2,7 @@
   position: relative;
   width: 90%;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 10px;
@@ -10,4 +11,7 @@
 }
 .story-list li {
   display: inline-block;
+}
+.select-box {
+  margin: 10px 10%;
 }

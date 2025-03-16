@@ -3,15 +3,16 @@ package com.novelreading.novelreading_backend.model;
 import jakarta.persistence.*;
 
 @Entity
+@Table(name = "chapter")
 public class Chapter {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long chapter_id;
     private String title;
     private String content;
-    @ManyToOne
-    @JoinColumn(name = "novel_id",nullable = false)
-    private Novel novel;
+//    @ManyToOne
+//    @JoinColumn(name = "novel_id",nullable = false)
+//    private Novel novel;
 
     public Chapter() {
     }

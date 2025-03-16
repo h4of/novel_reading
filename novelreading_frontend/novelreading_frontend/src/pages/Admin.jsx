@@ -5,6 +5,10 @@ import Header from "../components/Header";
 
 const Admin = () => {
   const [activeTab, setActiveTab] = useState("");
+  const [selectValue, setSelectValue] = useState("");
+  const handleChange = (e) => {
+    setSelectValue(e.target.value);
+  };
   return (
     <>
       <Header />
@@ -39,7 +43,13 @@ const Admin = () => {
         {activeTab === "edit" && (
           <div className="box">
             Chỉnh sửa thông tin truyện
-            <select value={selectValue} onChange={handleChange}>
+            <select
+              value={selectValue}
+              onClick={handleChange}
+              style={{ width: "" }}
+            >
+              <option value="">-----chọn truyện-----</option>
+              <option value="">truyen1</option>
               <option value=""></option>
             </select>
           </div>

@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import java.util.List;
 
 @Entity
+@Table(name = "novel")
 public class Novel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -14,6 +15,7 @@ public class Novel {
     private int chapter_number;
     private String origin;
     private String anou;
+    private int rating;
 
     @ManyToOne
     @JoinColumn(name="author_id",nullable = false)
@@ -21,21 +23,45 @@ public class Novel {
 
     @ManyToMany
     @JoinTable(
-            name = "novel_user",
+            name = "rate",
             joinColumns = @JoinColumn(name="novel_id"),
             inverseJoinColumns = @JoinColumn(name = "user_id")
     )
-    private List<User> users;
+    private List<User> usersRate;
+    @ManyToMany
+    @JoinTable(
+            name = "read",
+            joinColumns = @JoinColumn(name="novel_id"),
+            inverseJoinColumns = @JoinColumn(name = "user_id")
+    )
+    private List<User> usersRead;
+
 
     public Novel() {
     }
 
-    public List<User> getUsers() {
-        return users;
+    public int getRating() {
+        return rating;
     }
 
-    public void setUsers(List<User> users) {
-        this.users = users;
+    public void setRating(int rating) {
+        this.rating = rating;
+    }
+
+    public List<User> getUsersRead() {
+        return usersRead;
+    }
+
+    public void setUsersRead(List<User> usersRead) {
+        this.usersRead = usersRead;
+    }
+
+    public List<User> getUsersRate() {
+        return usersRate;
+    }
+
+    public void setUsersRate(List<User> usersRate) {
+        this.usersRate = usersRate;
     }
 
     public String getAnou() {

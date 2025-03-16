@@ -1,6 +1,28 @@
 import "./Register.css";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Register() {
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
+  const [passwordAgain, setPasswordAgain] = useState();
+  const navigate = useNavigate();
+  function handleClick() {
+    let user = { email, password };
+    fetch("http://localhost:8080/user/add", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(user),
+    })
+      .then((response) => response.json)
+      .then(() => {
+        alert("Đăng ký thành công");
+        navigate("/login");
+      })
+      .catch((error) => {
+        alert("Đăng ký không thành công");
+      });
+  }
   return (
     <div className="register-container">
       <div className="logo">
@@ -18,6 +40,8 @@ function Register() {
               placeholder="Email address"
               className="input-field"
               required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
           </div>
           <div className="input-wrapper">
@@ -27,18 +51,31 @@ function Register() {
               placeholder="password"
               className="input-field"
               required
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
             />
           </div>
           <div className="input-wrapper">
             <i className="material-symbols-rounded">lock</i>
             <input
-              type="password again"
+              type="password"
               placeholder="password again"
               className="input-field"
               required
+              value={passwordAgain}
+              onChange={(e) => setPasswordAgain(e.target.value)}
             />
           </div>
-          <button className="register-button">Đăng ký</button>
+          <button
+            className="register-button"
+            onClick={
+              password === passwordAgain
+                ? handleClick
+                : () => alert("Mật khẩu không khớp")
+            }
+          >
+            Đăng ký
+          </button>
         </form>
       </div>
       <div className="image-register">

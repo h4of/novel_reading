@@ -1,5 +1,3 @@
-import Header from "./components/Header.jsx";
-import Footer from "./components/Footer.jsx";
 import Home from "./pages/Home.jsx";
 import List from "./pages/List.jsx";
 import Author from "./pages/Author.jsx";
@@ -7,6 +5,8 @@ import Admin from "./pages/Admin.jsx";
 import Profile from "./pages/Profile.jsx";
 import Login from "./pages/auth/Login.jsx";
 import Register from "./pages/auth/Register.jsx";
+import NovelPage from "./components/NovelPage.jsx";
+import Chapter from "./components/ChapterComponent.jsx";
 import { Route, Routes } from "react-router-dom";
 
 const App = () => {
@@ -23,6 +23,8 @@ const App = () => {
           <Route path="user" element={<Profile />} />
           <Route path="admin" element={<Admin />} />
         </Route>
+        <Route path="/novel" element={<NovelPage />}></Route>
+        <Route path="/chapter" element={<Chapter />}></Route>
       </Routes>
     </>
   );

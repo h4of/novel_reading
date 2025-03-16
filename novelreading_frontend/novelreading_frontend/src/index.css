@@ -17,3 +17,32 @@
   border: 2px solid #3427273a;
   border-radius: 10px;
 }
+.chapter-component {
+  width: 90%;
+  height: 50px;
+  border: 2px solid #000;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+.author-component {
+  width: 80%;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 2rem;
+  margin: 10px auto;
+  border: 2px solid;
+}
+.novel-component:hover,
+.chapter-component:hover,
+.author-component:hover {
+  cursor: pointer;
+}
+.novel-component:active,
+.chapter-component:active,
+.author-component:active {
+  opacity: 50%;
+}
