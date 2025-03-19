@@ -12,7 +12,13 @@ const List = () => {
   let arrow = [<ChevronDown size={16} />, <ChevronUp size={16} />];
   const filters = {
     "Trạng Thái": ["Đã dừng", "Đang thực hiện", "Hoàn thành"],
-    "Thể Loại": ["Drama", "Shounen", "Hành Động", "Lãng Mạn", "Khoa Học"],
+    "Thể Loại": [
+      "Trinh Thám",
+      "Viễn Tưởng",
+      "Hành Động",
+      "Lãng Mạn",
+      "Khoa Học",
+    ],
     "Nguồn gốc": ["Truyện Việt Nam", "Truyện nước ngoài"],
   };
   const clickDropdown = (type) => {

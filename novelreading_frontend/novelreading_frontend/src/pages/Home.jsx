@@ -24,6 +24,9 @@ const Home = () => {
       route: "tam-quoc-dien-nghia",
     },
   ];
+  // useEffect(() => {
+  //   window.location.scrol(0, 0);
+  // });
   return (
     <div className="container">
       <Header />

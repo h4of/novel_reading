@@ -38,12 +38,7 @@
 .chapter-link .arrow {
   width: 100px;
   border: 2px solid #000;
-  opacity: 80%;
   border-radius: 10px;
-  background: ;
-}
-.chapter-link .arrow:hover {
-  opacity: 100%;
 }
 .chapter-link .arrow:active {
   scale: 0.9;
@@ -57,7 +52,7 @@
 .disable {
   width: 100px;
   border: 2px solid #000;
-  opacity: 40%;
+  opacity: 20%;
   pointer-events: none;
   border-radius: 10px;
 }

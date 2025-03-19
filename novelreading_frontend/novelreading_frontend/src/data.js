@@ -121,5 +121,53 @@ const Chapters = [
     title: "Trụ Vương tế miễu bà Nữ Oa",
     content: "/txt/1/chuong1.txt",
   },
+  {
+    novel_id: 1,
+    chapter_number: 2,
+    title: "Phản nước Thương, Tô Hộ đề thơ",
+    content: "/txt/1/chuong2.txt",
+  },
+  {
+    novel_id: 1,
+    chapter_number: 3,
+    title: "Xem thơ Tây Bá Hầu, Tô Hộ dâng Ðắc Kỷ",
+    content: "/txt/1/chuong3.txt",
+  },
+  {
+    novel_id: 1,
+    chapter_number: 4,
+    title: "Giết giai nhân, Hồ Ly mượn lệnh",
+    content: "/txt/1/chuong4.txt",
+  },
+  {
+    novel_id: 1,
+    chapter_number: 5,
+    title: "Vân Trung Tử dâng kiếm trừ yêu",
+    content: "/txt/1/chuong5.txt",
+  },
+  {
+    novel_id: 2,
+    chapter_number: 1,
+    title: "Ông Sherlock Homes",
+    content: "/txt/2/chuong1.txt",
+  },
+  {
+    novel_id: 2,
+    chapter_number: 2,
+    title: "Nỗi bất hạnh của dòng họ Baskerville",
+    content: "/txt/2/chuong2.txt",
+  },
+  {
+    novel_id: 2,
+    chapter_number: 3,
+    title: "Điểm mấu chốt",
+    content: "/txt/2/chuong3.txt",
+  },
+  {
+    novel_id: 2,
+    chapter_number: 4,
+    title: "Ngài Henry Baskerville",
+    content: "/txt/2/chuong4.txt",
+  },
 ];
 export { Novels, Authors, Chapters };

@@ -4,6 +4,7 @@ import NovelComponent from "../components/NovelComponent.jsx";
 import { Authors, Novels } from "../data.js";
 import { useParams } from "react-router-dom";
 import Footer from "../components/Footer.jsx";
+import { useEffect } from "react";
 
 const AuthorPage = () => {
   const { authorName } = useParams();

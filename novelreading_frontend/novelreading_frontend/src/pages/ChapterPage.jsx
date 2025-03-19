@@ -27,11 +27,15 @@ const ChapterPage = () => {
   const chapter = chapters.find(
     (obj) => `chuong-${obj.chapter_number}` === chapterNumber
   );
+
   useEffect(() => {
     fetch(`${chapter.content}`)
       .then((res) => res.text())
       .then((data) => setContent(data))
       .catch((error) => console.error("error!", error));
+  });
+  useEffect(() => {
+    window.scroll(0, 0);
   });
 
   function nextClick() {
