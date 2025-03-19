@@ -1,13 +1,13 @@
 import { useNavigate } from "react-router-dom";
 
-const AuthorComponent = ({ author_img, author_name }) => {
+const AuthorComponent = ({ author_img, author_name, author_path }) => {
   const navigate = useNavigate();
   return (
     <>
       <div
         className="author-component"
         onClick={() => {
-          navigate("");
+          navigate(`/authors/${author_path}`);
         }}
       >
         <img

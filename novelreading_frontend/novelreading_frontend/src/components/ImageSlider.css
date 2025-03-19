@@ -5,6 +5,7 @@
   position: relative;
   display: flex;
   overflow: hidden;
+  background: #3a2222;
 }
 .img-to-img {
   object-fit: cover;
@@ -30,4 +31,10 @@
 .slider-container button:hover {
   background: rgba(0, 0, 0, 0.2);
   opacity: 100%;
+}
+.slider-container img {
+  cursor: pointer;
+}
+.slider-container img:active {
+  opacity: 50%;
 }

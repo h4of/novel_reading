@@ -1,15 +1,22 @@
-import AuthorComponent from "../components/AuthorComponent";
-import Header from "../components/Header";
-import user from "/user.png";
+import AuthorComponent from "../components/AuthorComponent.jsx";
+import Footer from "../components/Footer.jsx";
+import Header from "../components/Header.jsx";
+import { Authors } from "../data.js";
 
 const Author = () => {
-  const author_name = "Name"; ////từ db
   return (
-    <div style={{ textAlign: "center" }}>
+    <div className="container" style={{ textAlign: "center" }}>
       <Header />
       <br />
       <h2>Danh sách tác giả</h2>
-      <AuthorComponent author_img={user} author_name={author_name} />
+      {Authors.map((author) => (
+        <AuthorComponent
+          author_img={author.img}
+          author_name={author.name}
+          author_path={author.route}
+        />
+      ))}
+      <Footer />
     </div>
   );
 };

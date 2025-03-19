@@ -1,75 +1,62 @@
 import "./List.css";
-import NovelComponent from "../components/NovelComponent";
-import user from "/user.png";
-import Header from "../components/Header";
+import NovelComponent from "../components/NovelComponent.jsx";
+import Header from "../components/Header.jsx";
+import { Novels } from "../data.js";
+import { ChevronDown, ChevronUp } from "lucide-react";
+import { useState } from "react";
+import Footer from "../components/Footer.jsx";
 
 const List = () => {
-  const arr = {
-    story_image: "/user.png",
-    story_name: "user",
+  const [openFilters, setOpenFilters] = useState({});
+  const [arrowIndex, setArrowIndex] = useState(0);
+  let arrow = [<ChevronDown size={16} />, <ChevronUp size={16} />];
+  const filters = {
+    "Trạng Thái": ["Đã dừng", "Đang thực hiện", "Hoàn thành"],
+    "Thể Loại": ["Drama", "Shounen", "Hành Động", "Lãng Mạn", "Khoa Học"],
+    "Nguồn gốc": ["Truyện Việt Nam", "Truyện nước ngoài"],
   };
-  const origin = [
-    {
-      name: "VN",
-      id: "vn",
-    },
-    {
-      name: "NN",
-      id: "nn",
-    },
-  ];
+  const clickDropdown = (type) => {
+    setOpenFilters({ ...openFilters, [type]: !openFilters[type] });
+    setArrowIndex((index) => (index + 1) % 2);
+  };
   return (
-    <>
+    <div className="container">
       <Header />
       <div className="select-box">
-        <input
-          type="radio"
-          id={origin[0].id}
-          name="option"
-          value={origin.name}
-        ></input>
-        <label htmlFor={origin[0].id}> Truyện Việt Nam</label>
-        <br />
-        <input
-          type="radio"
-          id={origin[1].id}
-          name="option"
-          value={origin.name}
-        ></input>
-        <label htmlFor={origin[1].id}> Truyện nước ngoài</label>
-        <br />
-        <input type="submit" value="xác nhận" />
+        {Object.entries(filters).map(([type, options]) => (
+          <div className="box">
+            <span onClick={() => clickDropdown(type)}>
+              {type}
+              {arrow[arrowIndex]}
+            </span>
+            {openFilters[type] && (
+              <div>
+                {options.map((option) => (
+                  <label>
+                    <input type="checkbox" className="input-checkbox" />
+                    {option}
+                  </label>
+                ))}
+              </div>
+            )}
+            <br />
+          </div>
+        ))}
+        <button className="custom-button">xác nhận</button>
       </div>
       <ul className="story-list">
-        <li>
-          <NovelComponent
-            novel_image={arr.story_image}
-            novel_name={arr.story_name}
-          ></NovelComponent>
-        </li>
-        <li>
-          <NovelComponent novel_image={user} novel_name="user"></NovelComponent>
-        </li>
-        <li>
-          <NovelComponent novel_image={user} novel_name="user"></NovelComponent>
-        </li>
-        <li>
-          <NovelComponent novel_image={user} novel_name="user"></NovelComponent>
-        </li>
-        <li>
-          <NovelComponent novel_image={user} novel_name="user"></NovelComponent>
-        </li>
-        <li>
-          <NovelComponent novel_image={user} novel_name="user"></NovelComponent>
-        </li>
-        <li>
-          <NovelComponent novel_image={user} novel_name="user"></NovelComponent>
-        </li>
-        <li>
-          <NovelComponent novel_image={user} novel_name="user"></NovelComponent>
-        </li>
+        {Novels.map((novel) => (
+          <li>
+            <NovelComponent
+              novel_image={novel.img}
+              novel_name={novel.name}
+              novel_path={novel.route}
+            />
+          </li>
+        ))}
       </ul>
-    </>
+      <Footer />
+    </div>
   );
 };
 

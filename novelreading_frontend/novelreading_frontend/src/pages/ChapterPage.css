@@ -1,0 +1,63 @@
+.chapter-container {
+  text-align: center;
+  max-width: clamp(100px, 90%, 1220px);
+  margin: auto;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+.chapter-container > * {
+  margin-bottom: 20px;
+}
+.chapter-container img {
+  margin: 80px 0;
+}
+.chapter-container p {
+  font-size: 2rem;
+  text-align: start;
+}
+.chapter-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.chapter-link .txt {
+  text-decoration: none;
+  font-size: 15px;
+  margin: 10px;
+  color: gray;
+}
+.chapter-link .txt:hover {
+  color: #000;
+}
+.chapter-link .txt > * {
+  margin-left: 20px;
+}
+.chapter-link > * {
+  cursor: pointer;
+}
+.chapter-link .arrow {
+  width: 100px;
+  border: 2px solid #000;
+  opacity: 80%;
+  border-radius: 10px;
+  background: ;
+}
+.chapter-link .arrow:hover {
+  opacity: 100%;
+}
+.chapter-link .arrow:active {
+  scale: 0.9;
+}
+.chapter-container pre {
+  text-align: start;
+  white-space: pre-wrap; /* Giữ nguyên khoảng trắng và xuống dòng */
+  word-wrap: break-word; /* Xuống dòng khi từ quá dài */
+  overflow-wrap: break-word;
+}
+.disable {
+  width: 100px;
+  border: 2px solid #000;
+  opacity: 40%;
+  pointer-events: none;
+  border-radius: 10px;
+}

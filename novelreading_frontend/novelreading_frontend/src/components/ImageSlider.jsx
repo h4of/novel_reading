@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
 import { ChevronsLeft, ChevronsRight } from "lucide-react";
 import "./ImageSlider.css";
+import { useNavigate } from "react-router-dom";
 
 const ImageSlider = ({ ImgURL }) => {
   const [indexImage, setIndexImage] = useState(0);
+  const [route, setRoute] = useState(0);
+  const navigate = useNavigate();
   function preSlide() {
     setIndexImage((index) => {
       if (index === 0) return ImgURL.length - 1;
@@ -26,12 +29,15 @@ const ImageSlider = ({ ImgURL }) => {
     <div className="slider-container">
       {ImgURL.map((url) => (
         <img
-          src={url}
+          src={url.img}
           className="img-to-img"
           style={{ translate: `${-100 * indexImage}%` }}
+          onClick={() => {
+            navigate(`/novel/${url.route}`);
+            window.location.reload();
+          }}
         ></img>
       ))}
-      <a href="#"></a>
       <button style={{ left: 0 }} onClick={preSlide}>
         <ChevronsLeft />
       </button>

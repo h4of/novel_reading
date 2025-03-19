@@ -10,7 +10,7 @@ const Admin = () => {
     setSelectValue(e.target.value);
   };
   return (
-    <>
+    <div className="container">
       <Header />
       <div className="profile-container">
         <p></p>
@@ -71,7 +71,7 @@ const Admin = () => {
         {activeTab === "delete" && <div className="box">Xóa truyện</div>}
         {activeTab === "hide" && <div className="box">Ẩn truyện</div>}
       </div>
-    </>
+    </div>
   );
 };
 

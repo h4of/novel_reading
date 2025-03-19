@@ -1,4 +1,4 @@
-import Header from "../components/Header";
+import Header from "../components/Header.jsx";
 import user from "../assets/images/user.png";
 import "./Profile.css";
 

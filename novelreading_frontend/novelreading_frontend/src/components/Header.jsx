@@ -9,7 +9,7 @@ const Header = () => {
       <div className="header-container">
         <Link className="navbar-brand" to="/home" reloadDocument>
           <img
-            src="/logo.svg"
+            src="/img/logo.svg"
             alt=""
             width="50"
             height="50"
@@ -21,7 +21,7 @@ const Header = () => {
           <ul className="nav-list">
             <NavbarLink to="/home">Trang chủ</NavbarLink>
             <NavbarLink to="/list">Danh sách</NavbarLink>
-            <NavbarLink to="/author">Tác giả</NavbarLink>
+            <NavbarLink to="/authors">Tác giả</NavbarLink>
           </ul>
         </div>
         <div className="nav-icon">

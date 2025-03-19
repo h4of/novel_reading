@@ -1,28 +1,30 @@
 .text-rating {
-  position: relative;
   text-align: center;
   padding: 10px;
+  position: relative;
 }
 .text-rating::after {
-  position: absolute;
   content: "";
-  margin: 0 10%;
   width: 80%;
-  height: 1px;
+  height: 2px;
+  margin: 0 10%;
   left: 0;
   top: 50%;
+  position: absolute;
+  background: #3427273a;
 }
 .text-rating h2 {
   position: relative;
-  background: #fff;
+  background: #f5f5f5;
   padding: 0 15px;
   display: inline;
   z-index: 1;
 }
 .novel-high-rating {
-  width: 70%;
+  width: 1200px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 10px;
-  margin: 10px 15%;
+  margin: 10px auto;
+  flex-wrap: wrap;
 }

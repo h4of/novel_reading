@@ -1,12 +1,13 @@
 import { useNavigate } from "react-router-dom";
 
-const NovelComponent = ({ novel_image, novel_name }) => {
+const NovelComponent = ({ novel_image, novel_name, novel_path }) => {
   const navigate = useNavigate();
   return (
     <div
       className="novel-component"
       onClick={() => {
-        navigate("");
+        navigate(`/novel/${novel_path}`);
+        window.location.reload();
       }}
     >
       <img

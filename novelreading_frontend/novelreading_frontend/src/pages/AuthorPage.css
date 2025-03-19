@@ -1,0 +1,32 @@
+.author-container {
+  width: 90%;
+  margin: 10px 5%;
+  display: flex;
+  gap: 5%;
+  background: #fff;
+  border: 1px solid #f5f5f6;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+.author-container .author-text > * {
+  padding: 5px 0;
+}
+.author-container img {
+  border: 2px solid #000;
+  border-radius: 50%;
+  max-width: 300px;
+  height: 200px;
+}
+.novel-of-author {
+  width: 90%;
+  margin: 15px 5%;
+}
+.novel-of-author ul {
+  display: flex;
+  gap: 20px;
+  padding: 10px 0;
+  flex-wrap: wrap;
+}
+.novel-of-author ul li {
+  display: inline;
+  margin: 15px 5px;
+}
