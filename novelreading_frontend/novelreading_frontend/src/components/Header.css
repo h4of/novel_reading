@@ -74,3 +74,60 @@
 .material-symbols-rounded {
   margin: 0 5px;
 }
+.search-tab {
+  width: 30%;
+  min-height: 20%;
+  margin: 10px 35%;
+  padding: 30px;
+  background: #fff;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid #3427273a;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  z-index: 5;
+}
+.search-tab input {
+  width: 60%;
+  height: 50px;
+  font-size: 15px;
+  outline: none;
+  border: outset;
+}
+.search-tab .X {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+.search-tab .X:hover {
+  border: 1px solid #acabab;
+  border-radius: 50%;
+  background: #acabab;
+}
+.novel-search {
+  width: 60%;
+  height: 30%;
+  border: 1px solid;
+  display: flex;
+  gap: 10px;
+  padding: 3px;
+  align-items: center;
+  cursor: pointer;
+}
+.novel-search img {
+  width: 100px;
+  height: 150px;
+}
+.opacity-tab {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+}

@@ -51,6 +51,16 @@ body {
   border: 2px solid;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
 }
+.novel-a-component {
+  width: 90%;
+  height: 200px;
+  margin: 10px 5%;
+  position: relative;
+  border: 3px solid;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
 .novel-component:hover,
 .chapter-component:hover,
 .author-component:hover {

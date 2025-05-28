@@ -10,11 +10,14 @@ import AuthorPage from "./pages/AuthorPage.jsx";
 import { Route, Routes } from "react-router-dom";
 import Test from "./components/test.jsx";
 import ChapterPage from "./pages/ChapterPage.jsx";
+import ProtectedRoute from "./components/ProtectedRoute.jsx";
+import NotFound from "./components/NotFound.jsx";
 
 const App = () => {
   return (
     <>
       <Routes>
+        <Route path="/not-found" element={<NotFound />} />
         <Route path="/test" element={<Test />} />
         <Route index element={<Home />} />
         <Route path="/home" element={<Home />} />
@@ -26,8 +29,14 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/profile">
-          <Route path="user" element={<Profile />} />
-          <Route path="admin" element={<Admin />} />
+          <Route path="user" element={
+            <ProtectedRoute allowedRoles={"USER"}>
+              <Profile/>
+            </ProtectedRoute>} />
+          <Route path="admin" element={
+            <ProtectedRoute allowedRoles={"ADMIN"}>
+              <Admin/>
+            </ProtectedRoute>} />
         </Route>
         <Route path="/novel">
           <Route path=":novelName" element={<NovelPage />}></Route>

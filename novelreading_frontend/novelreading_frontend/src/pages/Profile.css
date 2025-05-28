@@ -60,7 +60,7 @@
 .novel-recently span {
   position: relative;
   z-index: 1;
-  background: #fff;
+  background: #f5f5f5;
   padding: 0 0.9rem;
 }
 .novel-recently::after {
@@ -84,17 +84,186 @@
   text-align: center;
   padding: 10px;
 }
-.box .input-wrapper {
+.profile-container .add-container {
+  border: 2px solid;
+  width: 90%;
+  height: 150px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.add-tab {
+  width: 30%;
+  min-height: 20%;
+  margin: 10px 35%;
+  top: 50px;
+  padding: 30px;
+  background: #fff;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid #3427273a;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  z-index: 5;
+}
+.add-tab .X {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+.add-tab .X:hover {
+  border: 1px solid #acabab;
+  border-radius: 50%;
+  background: #acabab;
+}
+.opacity-tab {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
   width: 100%;
-  left: 35%;
+  height: 100%;
+  z-index: 4;
 }
-.box .input-wrapper .input-field {
-  width: 50%;
-  padding: 10px 0;
-  margin: 10px 0;
-  font-size: 100%;
-  border-radius: 0.3rem;
+.add-tab input {
+  width: 60%;
+  height: 50px;
+  font-size: 15px;
+  outline: none;
+  border: outset;
 }
-.box .input-wrapper .input-field::placeholder {
-  size: 100%;
+/* .novel-edit {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.upload-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 20%;
+}
+.novel-edit button {
+  width: 100px;
+} */
+
+.profile-page {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.profile-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.profile-header {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile-user-info {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.user-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.user-name {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.user-email {
+  font-size: 1rem;
+  color: #666;
+  margin: 0;
+}
+
+.profile-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.edit-button,
+.logout-button {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.edit-button {
+  background-color: #4a90e2;
+  color: white;
+}
+
+.logout-button {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.edit-button:hover,
+.logout-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.edit-button:active,
+.logout-button:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .profile-header {
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .profile-user-info {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .profile-actions {
+    width: 100%;
+    justify-content: center;
+  }
 }

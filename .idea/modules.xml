@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/novelreading-backend.iml" filepath="$PROJECT_DIR$/.idea/novelreading-backend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/novelreading.iml" filepath="$PROJECT_DIR$/.idea/novelreading.iml" />
+      <module fileurl="file://$PROJECT_DIR$/novelreading-backend/novelreading-backend.iml" filepath="$PROJECT_DIR$/novelreading-backend/novelreading-backend.iml" />
     </modules>
   </component>
 </project>
